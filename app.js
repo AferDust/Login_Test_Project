@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 fetch('http://afer.pythonanywhere.com/users/', {
-                    referrerPolicy: "unsafe_url"
+                    referrerPolicy: 'no-referrer'
                 })
                     .then(response => response.json())
                     .then(data => {
