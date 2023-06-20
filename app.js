@@ -1,6 +1,3 @@
-history.pushState(null, null, window.location.href);
-document.title = "Updated Page";
-
 function setFormMessage(formElement, type, message) {
     const messageElement = formElement.querySelector(".form__message");
     messageElement.textContent = message;
