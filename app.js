@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 password: passwordInput.value
             };
 
-            fetch("https://aferdust.pythonanywhere.com/login/", {
+            fetch("https://afer.pythonanywhere.com/login/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }).then((data) => {
                 localStorage.setItem("token", data.access);
 
-                fetch("https://aferdust.pythonanywhere.com/user_info/", {
+                fetch("https://afer.pythonanywhere.com/user_info/", {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem("token")}`,
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 users_list.classList.remove("form--hidden")
 
 
-                fetch('https://aferdust.pythonanywhere.com/users/')
+                fetch('http://afer.pythonanywhere.com/users/')
                     .then(response => response.json())
                     .then(data => {
                         data.forEach(user => {
@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 password: passwordInput[0].value
             };
 
-            fetch("https://aferdust.pythonanywhere.com/register/", {
+            fetch("https://afer.pythonanywhere.com/register/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
