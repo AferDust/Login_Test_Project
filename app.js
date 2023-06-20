@@ -77,7 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(formData),
-                referrerPolicy: "unsafe_url"
             })
                 .then((response) => {
                     if (response.ok) {
@@ -93,7 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         'Authorization': `Bearer ${localStorage.getItem("token")}`,
                         'Content-Type': 'application/json'
                     },
-                    referrerPolicy: "unsafe_url"
                 })
                     .then((response) => {
                         if (response.ok) {
@@ -196,7 +194,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(formData),
-                referrerPolicy: "unsafe_url"
             }).then((response) => {
                 if(response.ok){
                     e.preventDefault();
