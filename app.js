@@ -76,7 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify(formData),
+                referrerPolicy: "unsafe_url"
             })
                 .then((response) => {
                     if (response.ok) {
@@ -91,7 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem("token")}`,
                         'Content-Type': 'application/json'
-                    }
+                    },
+                    referrerPolicy: "unsafe_url"
                 })
                     .then((response) => {
                         if (response.ok) {
@@ -117,7 +119,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 users_list.classList.remove("form--hidden")
 
 
-                fetch('http://afer.pythonanywhere.com/users/')
+                fetch('http://afer.pythonanywhere.com/users/', {
+                    referrerPolicy: "unsafe_url"
+                })
                     .then(response => response.json())
                     .then(data => {
                         data.forEach(user => {
@@ -191,7 +195,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify(formData),
+                referrerPolicy: "unsafe_url"
             }).then((response) => {
                 if(response.ok){
                     e.preventDefault();
